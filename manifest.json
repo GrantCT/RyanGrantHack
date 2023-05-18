@@ -1,0 +1,23 @@
+{
+    "manifest_version": 2,
+    "name": "Focus",
+    "version": "1.0",
+    "description": "Changes color of infobox",
+    "icons": {"128": "128_icon.png"},
+    "browser_action": {
+      "default_icon": "128_icon.png",
+      "default_popup": "popup.html"
+    },
+    "permissions": ["activeTab"],
+    "content_scripts": [
+        {
+          "matches": ["https://en.wikipedia.org/*"],
+          "css": ["./index.css"],
+          "js": ["./jquery.min.js", "./main.js"]
+        },
+        {
+          "matches": ["https://www.nfl.com/*"],
+          "js": ["./nfl.js"]
+        }
+      ]
+  }
