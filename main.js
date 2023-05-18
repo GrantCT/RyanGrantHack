@@ -1,153 +1,202 @@
+// window.addEventListener('DOMContentLoaded', () => {
+const bod = document.querySelector('body')
+// bod.style.backgroundColor = 'blue'
 
-// // var contents = $('#contents');
-// // var contentsParent = contents.parent();
-// // console.log('hello', contentsParent);
-// // contents.remove();
-// // console.log('hello again,', contentsParent);
+// const media = [
+//   {
+//     imgURL: 'https://iili.io/HUZXIyb.png',
+//     audioURL: 'https://audio.jukehost.co.uk/11S85kTQMPxl6PLi0mZExYeY8i8ZgHZG',
+//     second: 7,
+//     name: 'Galadriel'
+//   }, {
+//     imgURL: 'https://iili.io/HUZhxiN.png',
+//     audioURL: 'https://audio.jukehost.co.uk/I2MGS1xSRa36gt2ptExl3ObfEmSRbgqe',
+//     second: 6,
+//     name: 'ClintEastWood'
+//   },
+//   {
+//     imgURL: 'https://iili.io/HUZwG9e.png',
+//     audioURL: 'https://audio.jukehost.co.uk/2YpiHZpILkDvGTnlUl2SJc1Obr2k9JWF',
+//     second: 9,
+//     name: 'Gandalf'
+//   },
+//   {
+//     imgURL: 'https://iili.io/HUZwSAg.png',
+//     audioURL: 'https://audio.jukehost.co.uk/S3QlSvoaRx2OAcOxuvGlwH3Xl0C9FVLp',
+//     second: 5,
+//     name: 'NuttyProfessor'
+//   },
+//   {
+//     imgURL: 'https://iili.io/HUZeBMx.webp',
+//     audioURL: 'https://audio.jukehost.co.uk/qmburQ9othsv8bgPRpuPLLElsWdUMK47',
+//     second: 11,
+//     name: 'Leonidas'
+//   },
+//   {
+//     imgURL: 'https://iili.io/HUZvREv.png',
+//     audioURL: 'https://audio.jukehost.co.uk/BBT4Uk9ZlNqfOhf25wdnwRYmIdTsNJmI',
+//     second: 6,
+//     name: 'WolfWall'
+//   },
+//   {
+//     imgURL: 'https://iili.io/HUZ8MAP.webp',
+//     audioURL: 'https://audio.jukehost.co.uk/y07iGB7uZkOSLK5vg5mKDvDlq7SIJ4yA',
+//     second: 6,
+//     name: 'Bateman'
+//   }, {
+//     imgURL: 'https://iili.io/HUZ8MAP.webp',
+//     audioURL: 'https://audio.jukehost.co.uk/8YHpLgokzAKe4jDL0Viuagcvsuis28u6',
+//     second: 9,
+//     name: 'Gladiator'
+//   }
+// ]
 
-// // function getRandom(min, max) {
-// //     return Math.floor(Math.random() * (max - min) + min)
-// // }
+const media = [
+  {
+    imgURL: 'https://iili.io/HUZXIyb.png',
+    audioURL: 'https://audio.jukehost.co.uk/11S85kTQMPxl6PLi0mZExYeY8i8ZgHZG',
+    second: 7,
+    name: 'Galadriel'
+  }, {
+    imgURL: 'https://iili.io/HUZhxiN.png',
+    audioURL: 'https://audio.jukehost.co.uk/I2MGS1xSRa36gt2ptExl3ObfEmSRbgqe',
+    second: 6,
+    name: 'ClintEastWood'
+  },
+  {
+    imgURL: 'https://iili.io/HUZwG9e.png',
+    audioURL: 'https://audio.jukehost.co.uk/2YpiHZpILkDvGTnlUl2SJc1Obr2k9JWF',
+    second: 9,
+    name: 'Gandalf'
+  },
+  {
+    imgURL: 'https://iili.io/HUZwSAg.png',
+    audioURL: 'https://audio.jukehost.co.uk/S3QlSvoaRx2OAcOxuvGlwH3Xl0C9FVLp',
+    second: 5,
+    name: 'NuttyProfessor'
+  },
+  {
+    imgURL: 'https://iili.io/HUZeBMx.webp',
+    audioURL: 'https://audio.jukehost.co.uk/qmburQ9othsv8bgPRpuPLLElsWdUMK47',
+    second: 11,
+    name: 'Leonidas'
+  },
+  {
+    imgURL: 'https://iili.io/HUZvREv.png',
+    audioURL: 'https://audio.jukehost.co.uk/BBT4Uk9ZlNqfOhf25wdnwRYmIdTsNJmI',
+    second: 6,
+    name: 'WolfWall'
+  },
+  {
+    imgURL: 'https://iili.io/HUZ8MAP.webp',
+    audioURL: 'https://audio.jukehost.co.uk/y07iGB7uZkOSLK5vg5mKDvDlq7SIJ4yA',
+    second: 6,
+    name: 'Bateman'
+  }, {
+    imgURL: 'https://iili.io/HUZSYbt.png',
+    audioURL: 'https://audio.jukehost.co.uk/8YHpLgokzAKe4jDL0Viuagcvsuis28u6',
+    second: 9,
+    name: 'Gladiator'
+  }, 	{
+    imgURL: 'https://iili.io/HUZ4Y3G.png',
+    audioURL: 'https://audio.jukehost.co.uk/5xYm9xRPBqzpmRFLL9Qd3vzibJ6gdbOd',
+    second: 10,
+    name: 'Aragorn'
+  }
+]
+let movieIndex = 0
+// const initialSelection = media[(Math.floor(Math.random() * media.length))];
 
-// //var randomColor = Math.floor(Math.random()*16777215).toString(16);
-
-// //const box = $("#infobox-above");
-
-// //console.log('hi');
-
-// // const box = document.getElementsByClassName('infobox-above')
-
-// //box.removeAttr("style");
-
-// //box.addClass('newback');
-
-// const replacementName = 'Alan and his big red balls';
-
-// const possessedName = replacementName + "'s ";
-
-// const possessedNameNoS = replacementName + "' ";
-
-// const regexNoS = new RegExp(possessedNameNoS, 'g');
-
-// // const parent = box.parent();
-
-// // console.log(parent)
-
-// // console.log(box)
-
-// // parent.addClass('boxing');
-
-// // console.log(box)
-
-// const title = $('#firstHeading');
-
-// //const titleText = $('.mw-page-title-main')
-
-// let titleText = title[0].textContent;
-
-// let indivWords = '';
-
-// const commonWords = ['the', 'of', 'a', 'an', 'and', 'by', 'in', 'on', '(series)', '(film)', '(musician)', '(character)'];
-
-// if (titleText.includes(' ')){
-//     let eachWord = titleText.split(' ');
-
-//     if (commonWords.includes(eachWord[eachWord.length - 1])){
-//         let len = eachWord.length - 1;
-//         titleText = eachWord.slice(0, len).join(" ");
-//     }
-
-//     let filteredArr = eachWord.filter(word => !commonWords.includes(word));
-//     console.log(filteredArr);
-//     words = filteredArr.map(a => `(${a})`).join('|');
-//     console.log(words);
-
-//     indivWords = new RegExp(words, 'g');
-
-//    // console.log(indivWords)
+// for (const audio of media) {
+//   console.log(audio)
+//   const currentAudio = document.createElement('audio')
+//   currentAudio.setAttribute('id', audio.name)
+//   currentAudio.setAttribute('src', audio.audioURL)
+//   console.log(currentAudio)
+//   console.log(currentAudio.id)
+//   console.log(currentAudio.src)
+//   bod.prepend(currentAudio)
 // }
 
-// console.log(indivWords)
+const applause = document.createElement('audio')
+applause.setAttribute('id', 'clap')
+// applause.setAttribute('autoplay')
+// applause.src = 'assets/claps.mp3'
+// applause.setAttribute('src', '/assets/claps.mp3')
+// https://audio.jukehost.co.uk/uLIcCKnaPuEDJLRsWnSAcKYiVW5p4OVs "never give up and luck will find you"
+// https://audio.jukehost.co.uk/U9a5tRgB9kYgQVjmhvuMcCzPgMylP6OR
+// https://audio.jukehost.co.uk/VVA1CWQW6wLy9aWBYGRSDoueJzaIraR7 // brave heart freedom
+// applause.setAttribute('src', 'https://soundcloud.com/grantjamthomas/the-flip-side?utm_source=clipboard&utm_medium=text&utm_campaign=social_sharing')
+// applause.setAttribute('src', 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3')
+// applause.setAttribute('src', 'https://audio.jukehost.co.uk/U9a5tRgB9kYgQVjmhvuMcCzPgMylP6OR')
+// applause.setAttribute('src', 'https://audio.jukehost.co.uk/VVA1CWQW6wLy9aWBYGRSDoueJzaIraR7')
+// applause.setAttribute('src', 'https://voca.ro/173ZA4Voofoh')
+// applause.setAttribute('type', 'audio/mp3')
+// applause.src = 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
+bod.prepend(applause)
+// const playing = setInterval(applause.play(), 1000)
 
-// const ogTitle = new RegExp (titleText, 'gi');
+const inspireImg = document.createElement('img')
+// "https://iili.io/HUZkT0l.png"
+inspireImg.setAttribute('id', 'inspire')
+// inspireImg.setAttribute('src', 'https://iili.io/HUZkT0l.png')
+bod.prepend(inspireImg)
 
-// console.log(ogTitle)
+function playAudio (url, id) {
+//   const clap = document.getElementById(id)
+  const clap = document.getElementById('clap')
+  clap.setAttribute('src', url)
+  //   console.log(clap)
+  clap.play()
+}
+// playAudio()
 
-// //titleText[0].textContent = 'Grant';
+// media
 
-// title[0].textContent = replacementName;
+function imgAp (url, id) {
+  const inspire = document.getElementById('inspire')
+  //   inspire.setAttribute('src', 'https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png')
+  inspire.setAttribute('src', url)
+//   console.log(inspire.style)
+//   console.log(inspire.style.visibility)
+//   console.log(inspire.style.visibility === 'hidden')
+}
 
-// //titleText[0].innerHTML = 'Grant';
+function throttle (cb) {
+  let canRun = true
+  return function (url, seconds, id) {
+    if (canRun) {
+      canRun = false
+      setTimeout(() => {
+        canRun = true
+      }, (seconds * 1000))
+      return cb(url, id)
+    }
+  }
+}
 
-// //title.innerHTML = 'Grant2';
+const throttledAudio = throttle(playAudio)
+const throttledImage = throttle(imgAp)
 
-// console.log(title);
+// document.addEventListener('load', (e) => {
+//   console.log('e', e)
+//   playAudio()
+//   // if (e.code === 'Space') {
+//   //   alert('Working')
+//   // }
+// })
 
-// //console.log('inspan', titleText);
+document.addEventListener('click', (e) => {
+//   const movie = media[(Math.floor(Math.random() * media.length))]
+  const movie = media[movieIndex]
 
-// //title.addClass('boxing');
-
-// // const txt = document.createTextNode("your cool text");
-
-// // console.log(txt);
-
-// // titleText.appendChild(txt);
-
-// console.log('updated');
-
-// //const possessive = /Grant'\s/g;
-
-// const possessive = new RegExp()
-
-// //let count = 0;
-// $("p").each(function() {
-//     //console.log("next <p> element with id: " + $(this).attr('id'));
-
-//     let current = $(this)[0].textContent;
-//     current = current.replace(ogTitle, replacementName);
-//     if (indivWords){
-//         current = current.replace(indivWords, replacementName)
-//     }
-//     current = current.replace(regexNoS, possessedName);
-//     current = current.replace(/\[.*?\]/g, '');
-//     $(this)[0].textContent = current
-//    // console.log(current.textContent)
-// });
-
-// // $("td").each(function() {
-// //     //console.log("next <p> element with id: " + $(this).attr('id'));
-
-// //     let current = $(this)[0].textContent;
-// //     current = current.replace(ogTitle, replacementName);
-// //     if (indivWords){
-// //         current = current.replace(indivWords, replacementName)
-// //     }
-// //     current = current.replace(regexNoS, possessedName);
-// //     current = current.replace(/\[.*?\]/g, '');
-// //     $(this)[0].textContent = current
-// //    // console.log(current.textContent)
-// // });
-
-// $("h3").each(function() {
-//     //console.log("next <p> element with id: " + $(this).attr('id'));
-
-//     let current = $(this)[0].textContent;
-//     current = current.replace(ogTitle, replacementName);
-//     if (indivWords){
-//         current = current.replace(indivWords, replacementName)
-//     }
-//     current = current.replace(regexNoS, possessedName);
-//     current = current.replace(/\[.*?\]/g, '');
-//     $(this)[0].textContent = current
-//    // console.log(current.textContent)
-// });
-
-// let box = $('.infobox-above');
-
-// if (!box){
-//     box = $('infobox-title')
-// }
-
-// console.log(box)
-
-// box[0].textContent = replacementName;
+  console.log('e', e)
+  throttledAudio(movie.audioURL, movie.second, movie.name)
+  throttledImage(movie.imgURL, movie.second)
+  movieIndex++
+//   imageAppear()
+//   if (e.code === 'Space') {
+//     alert('Working')
+//   }
+})
+// })

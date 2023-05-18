@@ -3,12 +3,27 @@
     font-size: xx-large;
 } */
 
+/* * {
+    background-color: blue;
+} */
 
-.boxing{
-    background-color: red;
-    /* color: red */
-}
 
-.newback {
+
+/* .newback {
     background-color: red; font-size: 125%;
+} */
+
+/* body {
+    background-color: blue;
+} */
+
+#inspire {
+    /* border: 10px solid pink; */
+    height: 200px;
+    width: 200px;
+    position: fixed;
+    z-index: 999;
+    /* visibility: hidden;
+    border: 0px solid transparent; */
+    /* background-color: black; */
 }
